@@ -1,4 +1,4 @@
-const Modelo = require('./ModeloTabelaFornecedor')
+const Modelo = require('./ModeloTabelaProdutos')
 
 module.exports = {
     listar () {
