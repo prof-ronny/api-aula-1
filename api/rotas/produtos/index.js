@@ -1,10 +1,17 @@
 const roteador = require('express').Router()
 const TabelaProdutos = require('./TabelaProdutos')
 
-roteador.use('/', async (requisicao, resposta) => {
-    const resultados = await TabelaProdutos.listar()
+const listarProdutos = [
+    {
+        "name": "Aiphone",
+        "preco": 3000
+    }
+]
+
+roteador.use('/',  (requisicao, resposta) => {
+    //const resultados = await TabelaProdutos.listar()
     resposta.send(
-        JSON.stringify(resultados)
+        JSON.stringify(listarProdutos)
     )
 })
 
